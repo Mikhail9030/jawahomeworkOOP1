@@ -1,4 +1,4 @@
-package ru.netology.domain.constructor;
+package ru.netology.domain;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -19,9 +19,9 @@ class RadioTest {
     @ParameterizedTest
     @CsvSource(
             value = {
-                    "'From first station'; 5; 1; 0",
+                    "'From first station'; 5; 0; 0",
                     "'Last station'; 14; 14; 14",
-                    "'More maximum station'; 14; 17; 0",
+                    "'More maximum station'; 5; 7; 0",
                     "'Less minimum station'; 5; -1; 0"
             }
             , delimiter = ';'
@@ -53,9 +53,9 @@ class RadioTest {
     @ParameterizedTest
     @CsvSource(
             value = {
-                    "'From last station'; 15; 15; 14",
+                    "'From last station'; 5; 5; 4",
                     "'Go first station'; 5; 1; 0",
-                    "'Less minimum station'; 10; 0; 5"
+                    "'Less minimum station'; 5; 0; 5"
             }
             , delimiter = ';'
     )
